@@ -1,0 +1,363 @@
+@font-face {
+  font-family: "Futura PT";
+  src:
+    url("./../fonts/FuturaPT-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Futura Now Headline";
+  src:
+    url("./../fonts/FuturaNowHeadlineBold.ttf") format("ttf");
+}
+
+
+h1,h2,h3,h4,h5,h6,p,a {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
+	--belyy: #fff;
+	--seryy: #909090;
+
+
+  --font-family: "Futura PT", sans-serif;
+  --second-family: "Futura Now Headline", sans-serif;
+
+  --text30_18:calc(18px + (30 - 18) * ((100vw - 360px) / (1920 - 360))); 
+  --text40_25:calc(25px + (40 - 25) * ((100vw - 360px) / (1920 - 360))); /*h1*/
+  --text20_14:calc(14px + (20 - 14) * ((100vw - 360px) / (1920 - 360))); 
+  --text20_18:calc(18px + (20 - 18) * ((100vw - 360px) / (1920 - 360))); /*h2*/
+  --text18_14:calc(14px + (18 - 14) * ((100vw - 360px) / (1920 - 360))); /*a*/
+
+  font-size: 12px;
+  background: url('./../img/main-bg.png') center no-repeat;
+  background-color: #fafafa;
+  background-size: cover;
+  font-weight: 400;
+}
+
+/*Контейнер*/
+
+.container-fluid {
+  max-width: 850px;
+  border-radius: 10px;
+  margin: 27px auto 19px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background: var(--belyy);
+  position: relative;
+}
+
+/*Бургер меню*/
+
+.burger {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+
+.burger-menu {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #d9d9d9;
+  position: relative;
+}
+.burger-menu::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #d9d9d9;
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.burger-menu::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #d9d9d9;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+/*Хедер*/
+
+header {
+  padding: 10px 0;
+  background: url('./../img/top-banner.png') center no-repeat;
+  background-size: cover;
+
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.header__content {
+  width: 100%;
+  min-height: 236px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.top__block {
+  text-align: center;
+}
+
+.top__subtitle {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: var(--text30_18);
+  line-height: 1.625em;
+  color: var(--belyy);
+}
+.title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: var(--text40_25);
+  line-height: 1.625em;
+  color: var(--belyy);
+}
+.bottom__subtitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: var(--text20_14);
+  line-height: 1.625em;
+  color: var(--belyy);
+}
+
+
+/*ПЛЕЕР*/
+
+.box__section {
+  margin-top: 32px;
+}
+
+.box-player {
+  border: 1px solid var(--seryy);
+  border-radius: 40px;
+  width: 820px;
+  height: 70px;
+}
+
+.audioplayer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.audioplayer_remote,
+.play-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 19px;
+  border-width: 0;
+  background-color: #fff;
+}
+
+.play-button-wrapper,
+.stop-button-wrapper {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.button-active {
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.hidden {
+  display: none;
+}
+.zero-opacity {
+  opacity: 0;
+}
+
+.audioplayer_remote {
+  width: 161px;
+}
+
+.audioplayer_volume {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.muted {
+  opacity: 0.3;
+}
+
+/*ПЛЕЙЛИСТ РАЗДЕЛ*/
+
+.playerlist__section {
+  margin-top: 25px;
+  padding: 0 3px;
+}
+    
+/*Подраздел с ссылками и для бургер меню в мобильном */
+
+h2 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: var(--text20_18);
+  line-height: 1.625em;
+  color: #000;
+}
+
+.sidebar a {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--text18_14);
+  line-height: 1.625em;
+  color: #4095d2;
+  text-decoration: none;
+}
+
+.sidebar__part {
+  margin-bottom: 15px;
+}
+
+/*Сам плейлист*/
+
+.rbcloud_nowplaying,
+.rbcloud_nexttrack,
+.rbcloud_recent_track {
+  border-radius: 10px;
+  width: 535px;
+  height: 80px;
+  background: rgba(237, 234, 234, 0.8);
+  padding: 8px 14px 12px;
+
+  display: flex; 
+  align-items: center; 
+  margin: 15px 0;
+}
+
+.rbcloud_np_wrapper,
+.rbcloud_nt_wrapper,
+.rbcloud_recent_artist_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 23px !important;
+
+}
+
+.rbcloud_np_minus,
+.rbcloud_nt_minus,
+.rbcloud_recent_minus {
+  display: block;
+  margin: 0 12px;
+}
+
+.rbcloud_np_title,
+.rbcloud_nt_title,
+.rbcloud_recent_title {
+  font-size: var(--text18_14);
+  line-height: 1.625em;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.rbcloud_np_artist,
+.rbcloud_nt_artist,
+.rbcloud_np_minus,
+.rbcloud_nt_minus,
+.rbcloud_recent_artist,
+.rbcloud_recent_minus {
+  font-size: var(--text18_14);
+  line-height: 1.625em;
+  font-family: var(--font-family);
+  font-weight: 450;
+  color: #000;
+}
+
+/*Футер*/
+
+footer {
+  color: #5c5c5c;
+  padding: 8px;
+  background-color: #f0f0f0;
+  font-size: 0.9em;
+  border-top: 1px solid #dfdfdf;
+  margin-top: 3px;
+}
+footer a {
+  color: #5c5c5c;
+}
+
+/*Медиа-запросы*/
+
+@media only screen and (max-width: 992px) {
+  .container-fluid {
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .burger {
+    display: block;
+    z-index: 200;
+  }
+
+  .box-player {
+    width: 100%;
+  }
+
+  .rbcloud_nowplaying,
+  .rbcloud_nexttrack,
+  .rbcloud_recent_track {
+    width: 100%;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right:-217px;
+    width: 217px;
+    height: 100%;
+    background: #fff;
+    padding: 46px 10px 10px;
+    z-index: 100;
+ 
+  }
+  .active {
+    transform: translateX(-217px);
+    transition: 2000ms;
+  }
+
+  .sidebar__part h2 {
+    margin-bottom: 10px;
+  }
+  .sidebar__part a {
+    margin-bottom: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+ header {
+  background-image: url('./../img/top-banner-360.png');
+ }
+ #seek-slider {
+  width: 60%;
+ }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="./css/style-final.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Радио &quot;Пять Элементов&quot;</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="burger">
+            <div class="burger-menu"></div>
+        </div>
+        <div class="row header">
+            <header class="col-xs-12">
+                <div class="header__content">
+                    <div class="top__block">
+                        <p class="top__subtitle">Радио</p>
+                        <h1 class="title">Пять Элементов</h1>
+                    </div>
+                    <p class="bottom__subtitle">Музыка тишины и гармонии</p>
+                </div>
+            </header>
+        </div>
+        <div class="row box__section">
+            <div class="col-xs-12 col-lg-12">
+                <div class="box-player">
+                    <!-- https://c22.radioboss.fm:8558/stream -->
+                    <div id="rbcloud_mplayer18011" class="rbcloud_mplayer audioplayer_container">
+                        <audio src="https://c22.radioboss.fm:8558/stream" preload="metadata"></audio>
+                        <div class="audioplayer_remote">
+                            <button class="play-icon">
+                                <div class="play-button-wrapper">
+                                    <img class="play" src="./img/play.svg">
+                                </div>
+                               <div class="stop-button-wrapper">
+                                    <img class="stop" src="./img/stop.svg">
+                               </div>
+                            </button>
+                        </div>
+                        <img class="playbutton-label" src="./img/play-button.svg" alt="playbutton">
+                        <div class="audioplayer_volume">
+                            <img class='mute' src="./img/mute.svg" alt="mutebutton">
+                            <input type="range" id='seek-slider' class="seek-slider" max="10" min="0" step="0.1" value="5"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row playerlist__section">
+            <div class="col-xs-4 col-lg-4 sidebar">
+                <div class="sidebar__part">
+                    <h2 class="box-head">Будьте с нами</h2>
+                    <!-- RadioBOSS Cloud TuneIn Links Widget (Start) -->
+                    <div class='rbcloud_links'>
+                        <div><a href='https://c22.radioboss.fm/stream/558'>Плеер</a></div>
+                        <div><a href='https://c22.radioboss.fm/playlist/558/stream.m3u'>M3U-плейлист</a></div>
+                        <div><a href='https://c22.radioboss.fm:8558/stream'>Ссылка на поток</a></div>
+                    </div>
+                    <!-- RadioBOSS Cloud TuneIn Links Widget (End) -->
+                </div>
+                <div class="sidebar__part">
+                    <h2 class="box-head">Контакты</h2>
+                    <a href="#">Центр “Пять элементов”</a>
+                </div>    
+            </div>
+            <div class="col-lg-8 playerlist">
+                <div class="col-xs-8">
+                    <div class="now__box">
+                        <h2 class="box-head">Текущая композиция</h2>
+    
+                        <!-- RadioBOSS Cloud NowPlaying Widget (Start) -->
+                        <div class='rbcloud_nowplaying' style='display: flex; align-items: center;'>
+                            <div>
+                                <a target='_blank' href='https://c22.radioboss.fm/w/artwork/558.jpg'>
+                                    <img id='rbcloud_np_c17576' src='https://c22.radioboss.fm/w/artwork/558.jpg' width='65' height='65' alt='cover art'>
+                                </a>
+                            </div>
+                            <div class='rbcloud_np_wrapper'style='margin-left: 5px;'>
+                                <div class='rbcloud_np_artist' id='rbcloud_np_a17576' style='font-weight: bold'></div>
+                                <div class='rbcloud_np_minus'>-</div>
+                                <div class='rbcloud_np_title' id='rbcloud_np_t17576'>...</div>
+                            </div>
+                        </div>
+                        <script src='https://c22.radioboss.fm/w/nowplaying2.js?u=558&amp;wid=17576'></script>
+                        <!-- RadioBOSS Cloud NowPlaying Widget (End) -->
+                    </div>     
+                    <div class="next__box">
+                        <h2 class="box-head">Следующая композиция</h2>
+    
+                        <!-- RadioBOSS CloudNextTrack Widget (Start) -->
+                        <div class='rbcloud_nexttrack' style='display: flex; align-items: center;'>
+                            <div>
+                                <a target='_blank' href='https://c22.radioboss.fm/w/artwork_next/558.jpg'><img id='rbcloud_nt_c10200' src='https://c22.radioboss.fm/w/artwork_next/558.jpg' width='65' height='65' alt='cover art'></a>
+                            </div>
+                            <div class='rbcloud_nt_wrapper' style='margin-left: 5px;'>
+                                <div class='rbcloud_nt_artist' id='rbcloud_nt_a10200' style='font-weight: bold'></div>
+                                <div class='rbcloud_nt_minus'>-</div>
+                                <div class='rbcloud_nt_title' id='rbcloud_nt_t10200'>...</div>
+                            </div>
+                        </div>
+                        <script src='https://c22.radioboss.fm/w/nexttrack.js?u=558&amp;wid=10200'></script>
+                        <!-- RadioBOSS Cloud NextTrack Widget (End) -->
+                    </div>
+                    <div class='recent__box'>
+                        <h2 class="box-head">Недавние композиции</h2>
+    
+                        <!-- RadioBOSS Cloud Recent Tracks Widget (Start) -->
+                        <div class='rbcloud_recenttracks' id='rbcloud_recent4014' data-cnt='10'>
+                            <div class='rbcloud_recent_track'>
+                                <div class='rbcloud_recent_track_cover' data-size='65'></div>
+                                <div class='rbcloud_recent_artist_wrapper' style='margin-left: 5px;'>
+                                    <div class='rbcloud_recent_artist' style='font-weight: bold'></div>
+                                    <div class='rbcloud_recent_minus'>-</div>
+                                    <div class='rbcloud_recent_title'>...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src='https://c22.radioboss.fm/w/recent.js?u=558&amp;wid=4014&amp;v=2'></script>
+                        <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <!-- <footer class="col-xs-12"><strong><a href="https://www.radioboss.fm">RadioBOSS Cloud</a></strong> </footer> -->
+        </div>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/script-final.js"></script>
+</body>
+</html>
